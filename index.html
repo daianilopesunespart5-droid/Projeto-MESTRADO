@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-PT" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tecnologia que Inclui | UNESPAR</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            primary: '#005088',
+                            secondary: '#11CAA0',
+                            accent: '#F59E0B',
+                            dark: '#0F172A',
+                            soft: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        :root {
+            --brand-primary: #005088;
+            --brand-secondary: #11CAA0;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            letter-spacing: -0.01em;
+            color: #334155;
+        }
+        .hero-bg { 
+            background: radial-gradient(circle at 0% 0%, rgba(17, 202, 160, 0.08) 0, transparent 40%), 
+                        radial-gradient(at 100% 100%, rgba(0, 80, 136, 0.05) 0, transparent 40%); 
+        }
+        h1, h2, h3, h4 {
+            color: #0F172A;
+            line-height: 1.2;
+            text-wrap: balance;
+        }
+        .highlight-text {
+            color: var(--brand-secondary);
+            font-weight: 800;
+        }
+        .card-container {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid #f1f5f9;
+        }
+        .card-container:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05);
+            border-color: var(--brand-secondary);
+        }
+        .img-mask {
+            border-radius: 2rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        .quote-gradient {
+            background: linear-gradient(135deg, rgba(0, 80, 136, 0.05) 0%, rgba(17, 202, 160, 0.05) 100%);
+        }
+    </style>
+</head>
+<body class="bg-white hero-bg">
+
+    <!-- Navegação Minimalista -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-extrabold text-lg text-brand-primary leading-none">Tecnologia que Inclui</span>
+                    <span class="text-[9px] uppercase tracking-widest text-brand-secondary font-black mt-1">UNESPAR | 2026</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-8 text-sm font-bold text-slate-500">
+                <a href="#plataformas" class="hover:text-brand-primary transition-colors">Plataformas</a>
+                <a href="#estrategias" class="hover:text-brand-primary transition-colors">Estratégias</a>
+                <a href="#criacao" class="hover:text-brand-primary transition-colors">Criação</a>
+                <!-- Botão Missão Pedagógica removido conforme solicitado -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-44 pb-20 px-6">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-3 py-1 bg-slate-100 rounded-full text-slate-600 text-[10px] font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-circle-check text-brand-secondary"></i> Guia Pedagógico de Inclusão
+                </div>
+                <h1 class="text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight">
+                    O Impacto dos <span class="highlight-text">Jogos Digitais</span> na Educação Especial
+                </h1>
+                
+                <p class="text-xl text-slate-600 leading-relaxed max-w-xl mx-auto lg:mx-0 font-semibold italic">
+                    "Jogos educacionais não são apenas ferramentas; são portas abertas para a autonomia, a curiosidade, o conhecimento e o sentimento de pertencimento."
+                </p>
+                
+                <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
+                    <a href="#plataformas" class="px-8 py-4 bg-brand-primary text-white rounded-2xl font-bold shadow-lg shadow-brand-primary/20 hover:scale-105 transition-all">Explorar Recursos</a>
+                    <a href="#criacao" class="px-8 py-4 bg-white text-brand-primary border border-slate-200 rounded-2xl font-bold hover:bg-slate-50 transition-all">Plataformas de Criação</a>
+                </div>
+            </div>
+            <!-- Galeria de Imagens -->
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <div class="img-mask overflow-hidden border-4 border-white h-60">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/13360408468726581452" class="w-full h-full object-cover" alt="[Imagem de Estudante em atividade]">
+                    </div>
+                    <div class="bg-brand-primary p-6 rounded-[2rem] text-white">
+                        <p class="text-sm font-medium leading-relaxed italic">"A mediação tecnológica é a ponte para a autonomia do estudante."</p>
+                    </div>
+                </div>
+                <div class="space-y-4 pt-8">
+                    <div class="bg-brand-secondary/10 p-6 rounded-[2rem] border border-brand-secondary/20 text-center">
+                        <h4 class="text-xs font-black uppercase text-brand-secondary tracking-widest mb-2">Foco em Equidade</h4>
+                        <p class="text-[10px] text-brand-primary font-bold">Respeito ao tempo individual.</p>
+                    </div>
+                    <div class="img-mask overflow-hidden border-4 border-white h-72">
+                        <img src="http://googleusercontent.com/image_collection/image_retrieval/17678813142917534513" class="w-full h-full object-cover" alt="[Imagem de Interface de jogo]">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Secção: Recursos e Conteúdos Prontos -->
+    <section id="plataformas" class="py-24 px-6 bg-slate-50 rounded-[4rem] mx-4 shadow-sm border border-slate-100">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 border-l-4 border-brand-secondary pl-6">
+                <h2 class="text-3xl font-extrabold text-slate-900 text-balance">Exploração de Jogos Educativos: Recursos e Conteúdos Prontos</h2>
+                <p class="text-slate-500 mt-2 font-medium">Seleção de plataformas consolidadas com atividades estruturadas para mediação imediata.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Matific -->
+                <div class="bg-white p-6 rounded-3xl card-container flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600 text-2xl">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3">Matific</h3>
+                    <p class="text-[13px] text-slate-500 mb-6 flex-grow leading-relaxed">Proporciona um ambiente de lógica previsível para alunos com <strong>Autismo</strong>. Design limpo que facilita a concentração em tarefas matemáticas.</p>
+                    <a href="https://www.matific.com" target="_blank" class="w-full py-3 bg-slate-50 text-brand-primary font-bold rounded-xl text-[10px] hover:bg-brand-primary hover:text-white transition-all shadow-sm">Abrir Matific</a>
+                </div>
+                <!-- Khan Academy -->
+                <div class="bg-white p-6 rounded-3xl card-container flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 text-emerald-600 text-2xl">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-balance">Khan Academy</h3>
+                    <p class="text-[13px] text-slate-500 mb-6 flex-grow leading-relaxed">Excelente para <strong>Deficiência Intelectual</strong>, permitindo repetir exercícios e vídeos infinitamente no próprio ritmo.</p>
+                    <a href="https://pt.khanacademy.org" target="_blank" class="w-full py-3 bg-slate-50 text-emerald-600 font-bold rounded-xl text-[10px] hover:bg-emerald-600 hover:text-white transition-all shadow-sm">Abrir Khan Academy</a>
+                </div>
+                <!-- Quizizz -->
+                <div class="bg-white p-6 rounded-3xl card-container flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-purple-50 rounded-2xl flex items-center justify-center mb-6 text-purple-600 text-2xl">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3">Quizizz</h3>
+                    <p class="text-[13px] text-slate-500 mb-6 flex-grow leading-relaxed">Foco em <strong>Transtorno do Déficit de Atenção com Hiperatividade</strong>, com feedbacks rápidos e recompensas imediatas.</p>
+                    <a href="https://quizizz.com" target="_blank" class="w-full py-3 bg-slate-50 text-purple-600 font-bold rounded-xl text-[10px] hover:bg-purple-600 hover:text-white transition-all shadow-sm">Abrir Quizizz</a>
+                </div>
+                <!-- ABCya -->
+                <div class="bg-white p-6 rounded-3xl card-container flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-orange-50 rounded-2xl flex items-center justify-center mb-6 text-orange-600 text-2xl">
+                        <i class="fa-solid fa-spell-check"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-3 text-balance leading-tight">ABCya!</h3>
+                    <p class="text-[13px] text-slate-500 mb-6 flex-grow leading-relaxed">Suporte visual robusto para alunos com <strong>Deficiência Auditiva</strong> e estímulos de alto contraste para os anos iniciais.</p>
+                    <a href="https://www.abcya.com" target="_blank" class="w-full py-3 bg-slate-50 text-orange-600 font-bold rounded-xl text-[10px] hover:bg-orange-600 hover:text-white transition-all shadow-sm">Abrir ABCya!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção: Ferramentas de Autoria e Desenvolvimento -->
+    <section id="criacao" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-12 border-l-4 border-brand-secondary pl-6">
+                <h2 class="text-3xl font-extrabold text-slate-900 text-balance">Ferramentas de Autoria: Desenvolvimento de Recursos Personalizados</h2>
+                <p class="text-slate-500 mt-2 font-medium">Plataformas para o professor criar experiências educativas sob medida.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Wordwall -->
+                <div class="bg-white p-8 rounded-3xl card-container flex flex-col shadow-sm border border-slate-100 text-center lg:text-left">
+                    <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
+                        <div class="p-2 bg-indigo-50 rounded-lg text-indigo-600"><i class="fa-solid fa-wand-magic"></i></div>
+                        <h4 class="font-bold text-slate-900">Wordwall</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-6">Crie labirintos e jogos de pareamento. Perfeito para adaptar conceitos para a <strong>Deficiência Intelectual</strong>.</p>
+                    <a href="https://wordwall.net" target="_blank" class="mt-auto py-3 bg-indigo-600 text-white font-bold rounded-xl text-[10px] text-center shadow-md hover:brightness-110 transition-all">Criar no Wordwall</a>
+                </div>
+                <!-- Genially -->
+                <div class="bg-white p-8 rounded-3xl card-container flex flex-col shadow-sm border border-slate-100 text-center lg:text-left">
+                    <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
+                        <div class="p-2 bg-pink-50 rounded-lg text-pink-600"><i class="fa-solid fa-gamepad"></i></div>
+                        <h4 class="font-bold text-slate-900">Genially</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-6">Monte Missões e Escape Rooms com áudio para <strong>Deficiência Visual</strong> e vídeos em Libras.</p>
+                    <a href="https://genial.ly" target="_blank" class="mt-auto py-3 bg-pink-600 text-white font-bold rounded-xl text-[10px] text-center shadow-md hover:brightness-110 transition-all">Iniciar no Genially</a>
+                </div>
+                <!-- Educaplay -->
+                <div class="bg-white p-8 rounded-3xl card-container flex flex-col shadow-sm border border-slate-100 text-center lg:text-left">
+                    <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
+                        <div class="p-2 bg-teal-50 rounded-lg text-teal-600"><i class="fa-solid fa-puzzle-piece"></i></div>
+                        <h4 class="font-bold text-slate-900">Educaplay</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-6">Desenvolva ditados e sopas de letras interativas para expandir a literacia dos alunos.</p>
+                    <a href="https://www.educaplay.com" target="_blank" class="mt-auto py-3 bg-teal-600 text-white font-bold rounded-xl text-[10px] text-center shadow-md hover:brightness-110 transition-all">Criar no Educaplay</a>
+                </div>
+                <!-- LearningApps -->
+                <div class="bg-white p-8 rounded-3xl card-container flex flex-col shadow-sm border border-slate-100 text-center lg:text-left">
+                    <div class="flex items-center justify-center lg:justify-start gap-3 mb-4">
+                        <div class="p-2 bg-blue-50 rounded-lg text-blue-600"><i class="fa-solid fa-lightbulb"></i></div>
+                        <h4 class="font-bold text-slate-900">LearningApps</h4>
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-6">Estruture exercícios de ordenação lógica úteis para o desenvolvimento das funções básicas.</p>
+                    <a href="https://learningapps.org" target="_blank" class="mt-auto py-3 bg-blue-600 text-white font-bold rounded-xl text-[10px] text-center shadow-md hover:brightness-110 transition-all">Abrir LearningApps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Estratégias Inclusivas -->
+    <section id="estrategias" class="py-24 px-6 bg-slate-50 rounded-[5rem] mx-4 shadow-inner">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900">Estratégias de Mediação Inclusiva</h2>
+                <p class="text-slate-500 font-medium">Protocolos práticos para intervenção na Sala de Recursos Multifuncionais.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Autismo -->
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm flex flex-col card-container">
+                    <h3 class="font-bold text-brand-primary mb-3 leading-tight">Autismo</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">A previsibilidade do ambiente digital reduz a ansiedade. Utilize roteiros visuais claros para cada tarefa.</p>
+                    <a href="#" class="mt-auto text-[10px] font-bold text-brand-secondary uppercase tracking-widest hover:underline italic">Ver Guia de Rotina Visual →</a>
+                </div>
+
+                <!-- 2. TDAH -->
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm flex flex-col card-container">
+                    <h3 class="font-bold text-brand-primary mb-3 leading-tight">Transtorno do Déficit de Atenção com Hiperatividade</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Trabalhe com micro-metas. O reforço positivo das plataformas ajuda a manter o engajamento ativo.</p>
+                    <a href="#" class="mt-auto text-[10px] font-bold text-brand-secondary uppercase tracking-widest hover:underline italic">Protocolo de Micro-metas →</a>
+                </div>
+
+                <!-- 3. TOD -->
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm flex flex-col card-container">
+                    <h3 class="font-bold text-brand-primary mb-3 leading-tight">Transtorno Opositor Desafiador</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Sempre ofereça a escolha dirigida. Dar autonomia ao aluno sobre o jogo reduz drasticamente a resistência.</p>
+                    <a href="#" class="mt-auto text-[10px] font-bold text-brand-secondary uppercase tracking-widest hover:underline italic">Sugestões de Escolha Dirigida →</a>
+                </div>
+
+                <!-- 4. Deficiência Intelectual -->
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm flex flex-col card-container">
+                    <h3 class="font-bold text-brand-primary mb-3 leading-tight">Deficiência Intelectual</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Foque na simplificação de comandos e na repetição pedagógica. Utilize reforços visuais claros após cada acerto.</p>
+                    <a href="#" class="mt-auto text-[10px] font-bold text-brand-secondary uppercase tracking-widest hover:underline italic">Exemplos de Simplificação →</a>
+                </div>
+
+                <!-- 5. Deficiência Visual -->
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm flex flex-col card-container text-balance">
+                    <h3 class="font-bold text-brand-primary mb-3 leading-tight">Deficiência Visual</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Priorize comandos por voz e audiodescrição. O feedback tátil-sonoro é essencial para a autonomia plena.</p>
+                    <a href="#" class="mt-auto text-[10px] font-bold text-brand-secondary uppercase tracking-widest hover:underline italic">Lista de Recursos de Áudio →</a>
+                </div>
+
+                <!-- 6. Deficiência Auditiva -->
+                <div class="p-8 bg-white border border-slate-100 rounded-3xl shadow-sm flex flex-col card-container text-balance">
+                    <h3 class="font-bold text-brand-primary mb-3 leading-tight">Deficiência Auditiva</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed mb-6">Sinalização iconográfica e comunicação visual. O sucesso não deve depender exclusivamente de alertas sonoros.</p>
+                    <a href="#" class="mt-auto text-[10px] font-bold text-brand-secondary uppercase tracking-widest hover:underline italic">Glossário Iconográfico →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secção de Reflexão Final -->
+    <section id="reflexao" class="py-24 px-6 quote-gradient">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="w-16 h-1 bg-brand-secondary mx-auto rounded-full mb-8"></div>
+            <p class="text-2xl md:text-4xl font-extrabold text-slate-800 leading-snug italic text-balance">
+                "Jogos educacionais não são apenas ferramentas; são portas abertas para a autonomia, a curiosidade, o conhecimento e o sentimento de pertencimento."
+            </p>
+            <div class="pt-4">
+                <span class="text-brand-primary font-bold uppercase tracking-widest text-xs">— Daiani Lopes da Silva</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="py-16 px-6 border-t border-slate-100 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-brand-primary rounded-xl flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-graduation-cap text-xs"></i>
+                </div>
+                <div class="flex flex-col text-center md:text-left">
+                    <span class="font-bold text-slate-900 text-sm">UNESPAR | 2026</span>
+                    <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest mt-1">Tecnologia que Inclui</span>
+                </div>
+            </div>
+            <div class="flex gap-10 items-center">
+                <!-- Logótipo Oficial UNESPAR -->
+                <img src="https://www.unespar.edu.br/imagens/logos/logo_unespar_preto.png" alt="Logo UNESPAR" class="h-12 opacity-90 hover:opacity-100 transition-all cursor-pointer">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId.startsWith('#')) {
+                    e.preventDefault();
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
